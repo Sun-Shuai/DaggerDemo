@@ -1,6 +1,6 @@
 package com.sunshuai.daggerdemo.daggermodule;
 
-import com.sunshuai.daggerdemo.model.User;
+import com.sunshuai.daggerdemo.model.ShoppingCart;
 
 import dagger.Module;
 import dagger.Provides;
@@ -9,9 +9,9 @@ import dagger.Provides;
  * Created by sunshuai on 2018/5/3
  */
 @Module
-public class ActivityModule {
+public class Act0Module {
     @Provides
-    User provideUser(){
-        return new User();
+    ShoppingCart provideCartModel() {
+        return new ShoppingCart();
     }
 }

@@ -4,20 +4,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".Main0Activity">
+
 
     <TextView
-        android:id="@+id/tv"
+        android:id="@+id/tv0"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:gravity="center"
-        tools:text="tv1" />
-
+        tools:text="tv2" />
 
     <Button
         android:id="@+id/btn"
         android:layout_width="match_parent"
-        android:text="next"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="next" />
+
 </LinearLayout>
