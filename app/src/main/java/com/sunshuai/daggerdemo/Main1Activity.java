@@ -8,11 +8,14 @@ import com.sunshuai.daggerdemo.daggercomponent.AppComponent;
 import com.sunshuai.daggerdemo.daggercomponent.DaggerAppComponent;
 import com.sunshuai.daggerdemo.daggermodule.AppModule;
 import com.sunshuai.daggerdemo.model.Money;
+import com.sunshuai.daggerdemo.model.User;
 
 import javax.inject.Inject;
 
 public class Main1Activity extends AppCompatActivity {
 
+    @Inject
+    User user;
     @Inject
     Money money;
 
@@ -30,7 +33,7 @@ public class Main1Activity extends AppCompatActivity {
                 .act1component()
                 .inject(this);
 
-        ((TextView) findViewById(R.id.tv1)).setText(money.getYuan() + "," + money.getJiao() + "," + money.getFen());
+        ((TextView) findViewById(R.id.tv1)).setText(user.getUsername() + "," + user.getAge() + "," + money.getYuan() + "," + money.getJiao() + "," + money.getFen());
 
     }
 }

@@ -12,6 +12,9 @@ import dagger.Provides;
 public class Act0Module {
     @Provides
     ShoppingCart provideCartModel() {
-        return new ShoppingCart();
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.setCardId(1);
+        shoppingCart.setCardName("我的购物卡");
+        return shoppingCart;
     }
 }

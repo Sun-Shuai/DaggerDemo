@@ -12,6 +12,9 @@ import dagger.Provides;
 public class AppModule {
     @Provides
     User provideUser() {
-        return new User();
+        User user = new User();
+        user.setUsername("孙帅");
+        user.setAge(23);
+        return user;
     }
 }

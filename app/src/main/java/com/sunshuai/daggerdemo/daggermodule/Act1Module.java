@@ -12,6 +12,10 @@ import dagger.Provides;
 public class Act1Module {
     @Provides
     Money provideMoney() {
-        return new Money();
+        Money money = new Money();
+        money.setYuan(10000);
+        money.setJiao(5);
+        money.setFen(0);
+        return money;
     }
 }

@@ -11,11 +11,15 @@ import com.sunshuai.daggerdemo.daggercomponent.DaggerAct0Component;
 import com.sunshuai.daggerdemo.daggercomponent.DaggerAppComponent;
 import com.sunshuai.daggerdemo.daggermodule.AppModule;
 import com.sunshuai.daggerdemo.model.ShoppingCart;
+import com.sunshuai.daggerdemo.model.User;
 
 import javax.inject.Inject;
 
 public class Main0Activity extends AppCompatActivity {
 
+    // TODO: 2018/5/3 dagger android
+    @Inject
+    User user;
     @Inject
     ShoppingCart shoppingCart;
 
@@ -36,7 +40,7 @@ public class Main0Activity extends AppCompatActivity {
                 .build()
                 .inject(this);
 
-        ((TextView) findViewById(R.id.tv0)).setText(shoppingCart.getCardId() + "," + shoppingCart.getCardName());
+        ((TextView) findViewById(R.id.tv0)).setText(user.getUsername() + "," + user.getAge() + "," + shoppingCart.getCardId() + "," + shoppingCart.getCardName());
 
         findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
             @Override
