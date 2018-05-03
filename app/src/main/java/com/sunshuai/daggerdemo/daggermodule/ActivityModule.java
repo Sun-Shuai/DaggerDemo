@@ -1,4 +1,6 @@
-package com.sunshuai.daggerdemo;
+package com.sunshuai.daggerdemo.daggermodule;
+
+import com.sunshuai.daggerdemo.model.User;
 
 import dagger.Module;
 import dagger.Provides;
@@ -8,7 +10,8 @@ import dagger.Provides;
  */
 @Module
 public class ActivityModule {
-    @Provides User provideUser(){
+    @Provides
+    User provideUser(){
         return new User();
     }
 }

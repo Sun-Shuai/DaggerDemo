@@ -1,4 +1,4 @@
-package com.sunshuai.daggerdemo;
+package com.sunshuai.daggerdemo.model;
 
 import java.io.Serializable;
 
