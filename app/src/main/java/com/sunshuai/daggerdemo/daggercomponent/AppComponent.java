@@ -4,6 +4,7 @@ import com.sunshuai.daggerdemo.activity.MainActivity;
 import com.sunshuai.daggerdemo.daggermodule.AppModule;
 import com.sunshuai.daggerdemo.model.User;
 
+
 import dagger.Component;
 
 /**
@@ -17,4 +18,6 @@ public interface AppComponent {
     User uer();
 
     Act1Component act1component();
+
+    Act2Component.MainBuilder mainBuilder();
 }

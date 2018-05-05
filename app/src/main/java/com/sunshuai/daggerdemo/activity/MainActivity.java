@@ -7,9 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.sunshuai.daggerdemo.R;
-import com.sunshuai.daggerdemo.daggercomponent.AppComponent;
 import com.sunshuai.daggerdemo.daggercomponent.DaggerAppComponent;
-import com.sunshuai.daggerdemo.daggermodule.AppModule;
 import com.sunshuai.daggerdemo.model.User;
 
 import javax.inject.Inject;
@@ -24,10 +22,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //写法1
+        //写法1  可以在module的含参构造函数中传值
 //        DaggerAppComponent
 //                .builder()
-//                .appModule(new AppModule())
+//                .appModule(new AppModule(***))
 //                .build()
 //                .inject(this);
 

@@ -10,7 +10,6 @@ import com.sunshuai.daggerdemo.R;
 import com.sunshuai.daggerdemo.daggercomponent.AppComponent;
 import com.sunshuai.daggerdemo.daggercomponent.DaggerAct0Component;
 import com.sunshuai.daggerdemo.daggercomponent.DaggerAppComponent;
-import com.sunshuai.daggerdemo.daggermodule.AppModule;
 import com.sunshuai.daggerdemo.model.ShoppingCart;
 import com.sunshuai.daggerdemo.model.User;
 

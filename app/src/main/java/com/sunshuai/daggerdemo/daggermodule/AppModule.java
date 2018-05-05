@@ -2,7 +2,7 @@ package com.sunshuai.daggerdemo.daggermodule;
 
 import com.sunshuai.daggerdemo.model.User;
 
-import javax.inject.Singleton;
+
 
 import dagger.Module;
 import dagger.Provides;
@@ -12,7 +12,6 @@ import dagger.Provides;
  */
 @Module
 public class AppModule {
-    @Singleton
     @Provides
     User provideUser() {
         User user = new User();
