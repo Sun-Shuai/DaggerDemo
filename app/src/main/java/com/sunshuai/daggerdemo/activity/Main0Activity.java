@@ -1,4 +1,4 @@
-package com.sunshuai.daggerdemo;
+package com.sunshuai.daggerdemo.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.sunshuai.daggerdemo.R;
 import com.sunshuai.daggerdemo.daggercomponent.AppComponent;
 import com.sunshuai.daggerdemo.daggercomponent.DaggerAct0Component;
 import com.sunshuai.daggerdemo.daggercomponent.DaggerAppComponent;
@@ -28,17 +29,29 @@ public class Main0Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main0);
 
+//        //写法1
+//        AppComponent appComponent = DaggerAppComponent
+//                .builder()
+//                .appModule(new AppModule())
+//                .build();
+//
+//        DaggerAct0Component
+//                .builder()
+//                .appComponent(appComponent)
+//                .build()
+//                .inject(this);
 
-        AppComponent appComponent = DaggerAppComponent
-                .builder()
-                .appModule(new AppModule())
-                .build();
+
+
+//        //写法2
+        AppComponent appComponent = DaggerAppComponent.create();
 
         DaggerAct0Component
                 .builder()
                 .appComponent(appComponent)
                 .build()
                 .inject(this);
+
 
         ((TextView) findViewById(R.id.tv0)).setText(user.getUsername() + "," + user.getAge() + "," + shoppingCart.getCardId() + "," + shoppingCart.getCardName());
 

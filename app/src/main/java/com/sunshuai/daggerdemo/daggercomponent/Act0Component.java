@@ -1,6 +1,6 @@
 package com.sunshuai.daggerdemo.daggercomponent;
 
-import com.sunshuai.daggerdemo.Main0Activity;
+import com.sunshuai.daggerdemo.activity.Main0Activity;
 import com.sunshuai.daggerdemo.daggermodule.Act0Module;
 
 import dagger.Component;

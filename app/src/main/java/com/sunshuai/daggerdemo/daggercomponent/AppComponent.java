@@ -1,6 +1,6 @@
 package com.sunshuai.daggerdemo.daggercomponent;
 
-import com.sunshuai.daggerdemo.MainActivity;
+import com.sunshuai.daggerdemo.activity.MainActivity;
 import com.sunshuai.daggerdemo.daggermodule.AppModule;
 import com.sunshuai.daggerdemo.model.User;
 

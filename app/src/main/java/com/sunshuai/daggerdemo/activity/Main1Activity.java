@@ -1,9 +1,10 @@
-package com.sunshuai.daggerdemo;
+package com.sunshuai.daggerdemo.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import com.sunshuai.daggerdemo.R;
 import com.sunshuai.daggerdemo.daggercomponent.AppComponent;
 import com.sunshuai.daggerdemo.daggercomponent.DaggerAppComponent;
 import com.sunshuai.daggerdemo.daggermodule.AppModule;
@@ -24,12 +25,17 @@ public class Main1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main1);
 
-        AppComponent appComponent = DaggerAppComponent
-                .builder()
-                .appModule(new AppModule())
-                .build();
+        //写法1
+//        DaggerAppComponent
+//                .builder()
+//                .appModule(new AppModule())
+//                .build()
+//                .act1component()
+//                .inject(this);
 
-        appComponent
+
+        //写法2
+        DaggerAppComponent.create()
                 .act1component()
                 .inject(this);
 
