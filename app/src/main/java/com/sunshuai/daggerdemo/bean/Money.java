@@ -1,9 +1,9 @@
-package com.sunshuai.daggerdemo.model;
+package com.sunshuai.daggerdemo.bean;
 
 import java.io.Serializable;
 
 /**
- * Created by sunshuai on 2018/5/3
+ * Created by sunshuai on 2018/5/6
  */
 public class Money implements Serializable {
     private int yuan;
